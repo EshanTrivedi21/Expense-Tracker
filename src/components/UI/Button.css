@@ -1,0 +1,18 @@
+.buttonasset {
+    font-size: 1.4rem;
+    padding: 0.4rem 0.5rem;
+    margin: 1rem 0rem;
+    border-radius: 10px;
+    border: none;
+    background: transparent;
+}
+
+.buttonasset:hover {
+    box-shadow:  8px 8px 16px #465571,
+    -8px -8px 16px #bae1ff;
+}
+
+.buttonasset:active {
+    box-shadow: inset 8px 8px 16px #465571,
+                inset -8px -8px 16px #bae1ff;
+}

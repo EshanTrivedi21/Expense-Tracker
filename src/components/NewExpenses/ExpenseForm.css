@@ -1,0 +1,39 @@
+.formMain {
+    font-size: 1.4rem;
+    padding: 15px;
+}
+
+.formTitle {
+    font-size: 1.5rem;
+    margin: 15px 5px;
+    text-align: center;
+}
+
+.formLabel {
+    padding-left: 10px;
+}
+
+.formInput {
+    font-size: 1.2rem;
+    padding: 7.5px;
+    padding-left: 20px;
+    outline: none;
+    border: none;
+    border-radius: 10px;
+    background: #89a6dc;
+    box-shadow: inset 8px 8px 16px #465571,
+                inset -8px -8px 16px #bae1ff;
+}
+
+.formButton {
+    width: 45%;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    margin-top: 35px;
+}
+
+.formDiv {
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+}

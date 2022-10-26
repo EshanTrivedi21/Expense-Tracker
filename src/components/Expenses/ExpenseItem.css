@@ -1,0 +1,20 @@
+.element {
+    background-color: #809bce;
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    color: black;
+    font-size: 1.5rem;
+    padding: 20px 50px;
+}
+
+span {
+    padding: 0.75rem 0rem;
+}
+
+.etc {
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    width: 35%;
+}
