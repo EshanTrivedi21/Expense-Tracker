@@ -6,9 +6,9 @@ import "../Expenses/ExpenseItem.css";
 import { useState } from "react";
 
 function ExpenseItem(props) {
-    const [title, newTitle] = useState (props.title) 
-    const clickHandler = () => {
-        newTitle("New Title");
+    const [title, setTitle] = useState(props.title) 
+    function clickHandler () {
+        setTitle("New Title");
     }
     return (
         <Card className="element">
