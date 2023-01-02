@@ -1,9 +1,14 @@
 import ExpenseItem from "./components/Expenses/ExpenseItem.js";
-import NewExpense from "./components/NewExpenses/NewExpense.js"
+import NewExpense from "./components/NewExpenses/NewExpense.js";
 
 import './components/UI/index.css';
 
 function App() {
+  const addExpenseHandler = (expense) => {
+    console.log("In App.js");
+    console.log(expense);
+  };
+
   const expense = [
     {
       title: "Tesla Model S Plaid",
@@ -27,7 +32,7 @@ function App() {
       <h2 className="heading">EXPENSE TRACKER</h2>
       <div className="main">
         <div className="mainForm">
-          <NewExpense></NewExpense>
+          <NewExpense onAddExpense={addExpenseHandler}></NewExpense>
         </div>
         <div className="mainDisplay">
           <ExpenseItem date={expense[0].date} amount={expense[0].amount} title={expense[0].title}></ExpenseItem>
