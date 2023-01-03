@@ -1,29 +1,19 @@
+import React, { useState } from "react";
 import NewExpense from "./components/NewExpenses/NewExpense.js";
 import Expenses from "./components/Expenses/Expenses.js";
 import './components/UI/index.css';
 
-const expense = [
-  {
-    title: "Tesla Model S Plaid",
-    amount: "$40000",
-    date: "20 / 10 / 22",
-  },
-  {
-    title: "Bunglow, New York ",
-    amount: "$400000",
-    date: "21 / 10 / 22",
-  },
-  {
-    title: "Bunglow Furnitures",
-    amount: "$40000",
-    date: "22 / 10 / 22",
-  },
-];
+const expense = [];
 
 function App() {
+  const [expenses, setExpenses] = useState(expense);
+
+  
+
   const addExpenseHandler = (expense) => {
-    console.log("In App.js");
-    console.log(expense);
+    setExpenses((prevExpenses) => {
+      return [expense, ...prevExpenses];
+    });
   };
 
   return (
@@ -33,7 +23,7 @@ function App() {
         <div className="mainForm">
           <NewExpense onAddExpense={addExpenseHandler}></NewExpense>
         </div>
-          <Expenses items={expense} />
+          <Expenses items={expenses} />
       </div>
     </div>
   );

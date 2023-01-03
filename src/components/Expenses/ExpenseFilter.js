@@ -2,14 +2,14 @@ import React from "react";
 import Card from "../UI/Card";
 import "./ExpenseFilter.css";
 
-const ExpenseFilter = () => {
+const ExpenseFilter = (props) => {
   const dropdownHandler = (event) => {
-    console.log(event.target.value);
+    props.onChangeFilter(event.target.value);
   };
   return (
     <Card className="expenses-filter">
         <label>Filter by year</label>
-        <select onChange={dropdownHandler} className="filterSelect">
+        <select value={props.onSelect} onChange={dropdownHandler} className="filterSelect">
           <option value="2023">2023</option>
           <option value="2022">2022</option>
           <option value="2021">2021</option>
