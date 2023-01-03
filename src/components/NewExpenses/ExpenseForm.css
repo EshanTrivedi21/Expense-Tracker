@@ -17,12 +17,13 @@
     font-size: 1.2rem;
     padding: 7.5px;
     padding-left: 20px;
+    margin: 5px;
     outline: none;
     border: none;
     border-radius: 10px;
     background: #89a6dc;
-    box-shadow: inset 8px 8px 16px #465571,
-                inset -8px -8px 16px #bae1ff;
+    box-shadow:  inset 4px 4px 5px #465571,
+    inset -4px -4px 5px #bae1ff;
 }
 
 .formButton {
@@ -39,13 +40,13 @@
 }
 
 .formButton:hover {
-    box-shadow:  8px 8px 16px #465571,
-    -8px -8px 16px #bae1ff;
+    box-shadow:  4px 4px 5px #465571,
+    -4px -4px 5px #bae1ff;
 }
 
 .formButton:active {
-    box-shadow: inset 8px 8px 16px #465571,
-                inset -8px -8px 16px #bae1ff;
+    box-shadow:  inset 4px 4px 5px #465571,
+    inset -4px -4px 5px #bae1ff;
 }
 
 .formDiv {

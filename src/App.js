@@ -1,31 +1,30 @@
-import ExpenseItem from "./components/Expenses/ExpenseItem.js";
 import NewExpense from "./components/NewExpenses/NewExpense.js";
-
+import Expenses from "./components/Expenses/Expenses.js";
 import './components/UI/index.css';
+
+const expense = [
+  {
+    title: "Tesla Model S Plaid",
+    amount: "$40000",
+    date: "20 / 10 / 22",
+  },
+  {
+    title: "Bunglow, New York ",
+    amount: "$400000",
+    date: "21 / 10 / 22",
+  },
+  {
+    title: "Bunglow Furnitures",
+    amount: "$40000",
+    date: "22 / 10 / 22",
+  },
+];
 
 function App() {
   const addExpenseHandler = (expense) => {
     console.log("In App.js");
     console.log(expense);
   };
-
-  const expense = [
-    {
-      title: "Tesla Model S Plaid",
-      amount: "$40000",
-      date: "20 / 10 / 22",
-    },
-    {
-      title: "Bunglow, New York ",
-      amount: "$400000",
-      date: "21 / 10 / 22",
-    },
-    {
-      title: "Bunglow Furnitures",
-      amount: "$40000",
-      date: "22 / 10 / 22",
-    },
-  ]
 
   return (
     <div>
@@ -34,11 +33,7 @@ function App() {
         <div className="mainForm">
           <NewExpense onAddExpense={addExpenseHandler}></NewExpense>
         </div>
-        <div className="mainDisplay">
-          <ExpenseItem date={expense[0].date} amount={expense[0].amount} title={expense[0].title}></ExpenseItem>
-          <ExpenseItem date={expense[1].date} amount={expense[1].amount} title={expense[1].title}></ExpenseItem>
-          <ExpenseItem date={expense[2].date} amount={expense[2].amount} title={expense[2].title}></ExpenseItem>
-        </div>
+          <Expenses items={expense} />
       </div>
     </div>
   );

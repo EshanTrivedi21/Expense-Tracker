@@ -12,7 +12,7 @@ function NewExpense (props) {
         props.onAddExpense(expenseData);
     }
     return (
-        <Card>
+        <Card className="margin-zero">
             <ExpenseForm onSaveExpense = {saveExpenseHandler}></ExpenseForm>
         </Card>
     );
