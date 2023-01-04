@@ -20,7 +20,7 @@ const Expenses = (props) => {
         onSelect={filteredYear}
         onChangeFilter={formChangeHandler}
       />
-      <ExpensesChart expenses={filteredExpenses} />
+      {filteredExpenses.length === 0 ? null : ( <ExpensesChart expenses={filteredExpenses} /> )}
       {filteredExpenses.length === 0 ? (
         <Card>
           <p className="noExpenses">No expenses found.</p>
