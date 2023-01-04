@@ -7,8 +7,8 @@ const Expenses = (props) => {
   const formChangeHandler = (selectedYear) => {
     setFilteredYear(selectedYear);
   };
-  const filteredExpenses = props.items.filter((expense) => {
-    return expense.date.getFullYear().toString() === filteredYear;
+  const filteredExpenses = props.items.filter((expenses) => {
+    return expenses.date.getFullYear().toString() === filteredYear;
   });
   return (
     <div className="mainDisplay">
@@ -16,7 +16,7 @@ const Expenses = (props) => {
         onSelect={filteredYear}
         onChangeFilter={formChangeHandler}
       />
-      {props.items.map((expenses) => (
+      {filteredExpenses.map((expenses) => (
         <ExpenseItem
           key={expenses.id}
           title={expenses.title}

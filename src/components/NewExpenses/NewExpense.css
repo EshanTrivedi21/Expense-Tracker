@@ -2,3 +2,10 @@
     margin: 0;
     padding: 13px 0px;
 }
+
+.formOpenButton {
+    width: 60%;
+    margin: 10px auto;
+    padding: 5px 0px;
+    font-size: 1.2em;
+}

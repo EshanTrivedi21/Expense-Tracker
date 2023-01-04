@@ -3,12 +3,17 @@ import NewExpense from "./components/NewExpenses/NewExpense.js";
 import Expenses from "./components/Expenses/Expenses.js";
 import './components/UI/index.css';
 
-const expense = [];
+const staticExpenses = [
+  {
+    id: "e3",
+    title: "Car Insurance",
+    amount: 294.67,
+    date: new Date(2021, 2, 28),
+  },
+];
 
 function App() {
-  const [expenses, setExpenses] = useState(expense);
-
-  
+  const [expenses, setExpenses] = useState(staticExpenses);
 
   const addExpenseHandler = (expense) => {
     setExpenses((prevExpenses) => {
