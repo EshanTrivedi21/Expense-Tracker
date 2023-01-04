@@ -30,7 +30,7 @@ function NewExpense(props) {
         <ExpenseForm onSaveExpense={saveExpenseHandler} onCloseForm={closeFormHandler}></ExpenseForm>
       ) : (
         <Button className="formButton formOpenButton" onClick={openFormHandler}>
-          ADD NEW EXPENSE
+          ADD EXPENSE
         </Button>
       )}
     </Card>

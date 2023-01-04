@@ -1,15 +1,25 @@
 import React, { useState } from "react";
 import NewExpense from "./components/NewExpenses/NewExpense.js";
 import Expenses from "./components/Expenses/Expenses.js";
-import './components/UI/index.css';
+import "./components/UI/index.css";
 
 const staticExpenses = [
   {
     id: "e3",
     title: "Car Insurance",
-    amount: 294.67,
-    date: "2021-2-28",
+    amount: "294.67",
+    date: "2021-02-28",
   },
+  {
+    id: "e1",
+    title: "Toilet Paper",
+    amount: "94.12",
+    date: "2020-07-12",
+  },
+  { id: "e2", 
+    title: "New TV", 
+    amount: "799.49", 
+    date: "2020-08-22" },
 ];
 
 function App() {
@@ -28,7 +38,7 @@ function App() {
         <div className="mainForm">
           <NewExpense onAddExpense={addExpenseHandler}></NewExpense>
         </div>
-          <Expenses items={expenses} />
+        <Expenses items={expenses} />
       </div>
     </div>
   );
