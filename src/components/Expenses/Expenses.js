@@ -7,8 +7,8 @@ const Expenses = (props) => {
   const formChangeHandler = (selectedYear) => {
     setFilteredYear(selectedYear);
   };
-  const filteredExpenses = props.items.filter((expenses) => {
-    return expenses.date.getFullYear().toString() === filteredYear;
+  const filteredExpenses = props.items.filter((expense) => {
+    return expense.date.slice(0,4) === filteredYear;
   });
   return (
     <div className="mainDisplay">
