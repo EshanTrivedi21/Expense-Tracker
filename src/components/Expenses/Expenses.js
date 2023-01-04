@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "./Expenses.css";
 import ExpenseItem from "./ExpenseItem.js";
 import ExpenseFilter from "./ExpenseFilter.js";
+import ExpensesChart from "./ExpensesChart.js";
 import Card from "../UI/Card.js";
 
 const Expenses = (props) => {
@@ -12,12 +13,14 @@ const Expenses = (props) => {
   const filteredExpenses = props.items.filter((expense) => {
     return expense.date.slice(0, 4) === filteredYear;
   });
+  
   return (
     <div className="mainDisplay">
       <ExpenseFilter
         onSelect={filteredYear}
         onChangeFilter={formChangeHandler}
       />
+      <ExpensesChart expenses={filteredExpenses} />
       {filteredExpenses.length === 0 ? (
         <Card>
           <p className="noExpenses">No expenses found.</p>

@@ -13,7 +13,7 @@ function ExpenseForm(props) {
   };
 
   const amountChangeHandler = (event) => {
-    setNewAmount((event.target.value).toString());
+    setNewAmount(event.target.value);
   };
 
   const dateChangeHandler = (event) => {
@@ -31,7 +31,7 @@ function ExpenseForm(props) {
     props.onSaveExpense(expenseData);
 
     setNewTitle("");
-    setNewAmount("");
+    setNewAmount(0);
     setNewDate("");
   }
 
